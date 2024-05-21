@@ -76,12 +76,12 @@ II- Intégrer ChatGPT dans Rasa afin qu'il réponde automatiquement, vous pouvez
 
 
 Prérequis
-
     Un compte OpenAI et une clé API. Vous pouvez obtenir une clé API en vous inscrivant sur le site d'OpenAI et en créant un nouveau projet.
     Un projet Rasa fonctionnel sur votre machine locale Ubuntu.
+  
 
 Étape 1 : Installer les bibliothèques nécessaires
-
+  
 Installez la bibliothèque openai pour interagir avec l'API de ChatGPT:
 
 --> pip install rasa openai
@@ -89,6 +89,46 @@ Installez la bibliothèque openai pour interagir avec l'API de ChatGPT:
 Étape 2 : Configurer les actions personnalisées
 
 Créez un fichier actions.py dans le répertoire de votre projet Rasa si ce n'est pas déjà fait. Ensuite, ajoutez le code pour appeler l'API de ChatGPT( le code se trouve dans le le repertoire principale main)
+
+Étape 3 : Mettre à jour le domaine Rasa
+
+Vous devez ajouter l'action personnalisée à votre fichier domain.yml
+
+Étape 4 : Mettre à jour vos histoires
+
+Ajoutez une histoire pour définir quand l'action personnalisée doit être appelée dans votre fichier data/stories.yml
+
+Étape 5 : Entraîner votre modèle
+
+Réentraînez votre modèle pour prendre en compte les modifications :
+
+--> rasa train
+
+Étape 6 : Démarrer le serveur d'actions et Rasa
+
+Vous devez démarrer le serveur d'actions et le serveur Rasa :
+
+Dans une première fenêtre de terminal :
+
+--> rasa run actions
+
+Dans une deuxième fenêtre de terminal :
+
+rasa run
+
+
+Étape 7 : Tester votre assistant
+
+Vous pouvez maintenant tester votre assistant via le shell de Rasa :
+
+--> rasa shell
+
+Posez une question ou envoyez un message qui déclencherait l'intent ask_chatgpt et voyez si l'assistant répond avec la réponse générée par ChatGPT.
+
+
+III. Intregration sur whtasapp
+
+
 
 
 
