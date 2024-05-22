@@ -31,7 +31,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Mfourga/chatbot_ai'
+                git branch: 'main', url: 'https://github.com/Mfourga/chatbot_Ai'
             }
         }
 
