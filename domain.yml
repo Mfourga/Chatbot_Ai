@@ -1,0 +1,7 @@
+version: "3.1"
+
+intents:
+  - ask_anything
+
+actions:
+  - action_chatgpt

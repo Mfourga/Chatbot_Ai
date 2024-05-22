@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Install Rasa on Ubuntu') {
+            steps {
+                script {
+                    // Copier le script d'installation dans le pod Ubuntu
+                    sh 'kubectl cp install_rasa.sh ubuntu-deployment-7c8957798c-gwc4d:/tmp/install_rasa.sh'
+                    
+                    // Rendre le script exécutable dans le pod Ubuntu
+                    sh 'kubectl exec ubuntu-deployment-7c8957798c-gwc4d -- chmod +x /tmp/install_rasa.sh'
+                    
+                    // Exécuter le script d'installation dans le pod Ubuntu
+                    sh 'kubectl exec ubuntu-deployment-7c8957798c-gwc4d -- /tmp/install_rasa.sh'
+                    
+                    // Exécuter 'rasa init' dans le pod Ubuntu
+                    sh 'kubectl exec ubuntu-deployment-7c8957798c-gwc4d -- rasa init'
+                }
+            }
+        }
+    }
+}

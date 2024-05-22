@@ -1,0 +1,3 @@
+[submodule "Chatbot_Ai"]
+	path = Chatbot_Ai
+	url = https://github.com/Mfourga/Chatbot_Ai.git

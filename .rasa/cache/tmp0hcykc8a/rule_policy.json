@@ -1,0 +1,32 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_rest_day\"}}]": "utter_rest_day",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_rest_day\"}}, {\"prev_action\": {\"action_name\": \"utter_rest_day\"}, \"user\": {\"intent\": \"ask_rest_day\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_team_strategy\"}}]": "utter_team_strategy",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_team_strategy\"}}, {\"prev_action\": {\"action_name\": \"utter_team_strategy\"}, \"user\": {\"intent\": \"ask_team_strategy\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_drills\"}}]": "utter_drills",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_drills\"}}, {\"prev_action\": {\"action_name\": \"utter_drills\"}, \"user\": {\"intent\": \"ask_drills\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_coach\"}}]": "utter_coach",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_coach\"}}, {\"prev_action\": {\"action_name\": \"utter_coach\"}, \"user\": {\"intent\": \"ask_coach\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_equipment\"}}]": "utter_equipment",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_equipment\"}}, {\"prev_action\": {\"action_name\": \"utter_equipment\"}, \"user\": {\"intent\": \"ask_equipment\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_training_location\"}}]": "utter_training_location",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_training_location\"}}, {\"prev_action\": {\"action_name\": \"utter_training_location\"}, \"user\": {\"intent\": \"ask_training_location\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_schedule\"}}]": "utter_schedule",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_schedule\"}}, {\"prev_action\": {\"action_name\": \"utter_schedule\"}, \"user\": {\"intent\": \"ask_schedule\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_match\"}}]": "utter_match",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_match\"}}, {\"prev_action\": {\"action_name\": \"utter_match\"}, \"user\": {\"intent\": \"ask_match\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent back",
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start"
+    ]
+  }
+}

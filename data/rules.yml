@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+- rule: Respond to any question with ChatGPT
+  steps:
+    - intent: ask_anything
+    - action: action_chatgpt
